@@ -2,7 +2,7 @@
 # CS113-HW04-DoubleLinkedList
 ## HW #4 for CS113 - Double Linked List Implementation
 
-*[Insert Build Status Image]*
+[![Build Status](https://travis-ci.com/MiraCostaCS-Nery/cs113-hw4-doublelinkedlist-deverzs.svg?token=ZAzHRsZG2pX38hWavrqj&branch=master)](https://travis-ci.com/MiraCostaCS-Nery/cs113-hw4-doublelinkedlist-deverzs)
 
 > **"A list is only as strong as its weakest link."**
 > — Donald Knuth

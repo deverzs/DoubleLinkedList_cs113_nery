@@ -434,16 +434,19 @@ public class DoubleLinkedListTest {
         try {
             stringList.remove(3);
             fail("String list remove() test should have thrown exception for out of bounds (index >= size)");
-        } catch (IndexOutOfBoundsException ioobe) { /* Test Passed */ }
+        } catch (IndexOutOfBoundsException a ) { /* Test Passed */ }
 
         try {
             intList.remove(-1);
             fail("Integer list remove() test should have thrown exception for out of bounds (index < 0)");
         } catch (IndexOutOfBoundsException ioobe) { /* Test Passed */ }
-
+        System.out.println("All exceptions thrown");
         // Check for false by remove(Object)
+
         assertFalse("Character list remove returned true when value is NOT present in list", charList.remove(new Character(CHAR_INSERT_VAL)));
+
         assertFalse("Double list remove returned true when value is NOT present in list", doubleList.remove(DOUBLE_INSERT_VAL));
+
     }
 
     @Test
@@ -838,7 +841,9 @@ public class DoubleLinkedListTest {
         // Remove from middle of list following call to previous
         doubleIterator = doubleList.listIterator(DOUBLE_SET_INDEX); // index 2
         System.out.println("Double list before removal: " + doubleList);
-        doubleIterator.previous();
+        System.out.println(doubleIterator.previous().toString());
+        System.out.println("passed previous in JUNIt");
+
         doubleIterator.remove();
         System.out.println("Double list after removal: " + doubleList);
         // Validate with list's contains method
@@ -852,7 +857,7 @@ public class DoubleLinkedListTest {
         System.out.println("Char list after removal: " + charList);
         // Validate with list's contains method
         assertFalse("Test failed - Element at end of list was not removed.", charList.contains(CHAR_VALUES[2]));
-    }
+      }
 
     @Test
     public void testIteratorRemoveError() {
